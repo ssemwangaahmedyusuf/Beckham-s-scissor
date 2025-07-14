@@ -7,8 +7,9 @@
   <title>Rock Paper</title>
 </head>
 <body>
-  <div class="bg-[#0084D1] h-[8rem] w-[100%] flex justify-evenly items-center gap-[4rem] md:gap-[2rem]">
-    <div>
+  <div class="bg-[#0084D1] h-[8rem] w-[100%] flex justify-evenly items-center gap-[4rem]">
+    <div class="flex justify-center gap-8">
+      <div>
         <button onclick="
       playGame('Rock')
     " class=" bg-slate-400 text-gray-800 rounded-full animate-spin py-4 px-2.5">Rock</button>
@@ -35,8 +36,10 @@
 
           localStorage.removeItem('score');
    
-  " class=" bg-slate-400  text-gray-800 rounded-full py-4 px-3 ">Reset</button>
+  " class=" bg-slate-400  text-gray-800 rounded-full py-4 px-3  animate-spin ">Reset</button>
   </div>
+    </div>
+    
     </div>
       
 

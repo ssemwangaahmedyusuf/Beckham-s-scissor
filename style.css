@@ -15,9 +15,6 @@
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-spin: spin 1s linear infinite;
     --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --default-font-family: var(--font-sans);
@@ -170,83 +167,20 @@
   }
 }
 @layer utilities {
-  .absolute {
-    position: absolute;
-  }
-  .relative {
-    position: relative;
-  }
-  .mx-5 {
-    margin-inline: calc(var(--spacing) * 5);
-  }
-  .mx-6 {
-    margin-inline: calc(var(--spacing) * 6);
-  }
-  .mx-7 {
-    margin-inline: calc(var(--spacing) * 7);
-  }
-  .mx-8 {
-    margin-inline: calc(var(--spacing) * 8);
-  }
-  .mx-10 {
-    margin-inline: calc(var(--spacing) * 10);
-  }
-  .mx-\[2rem\] {
-    margin-inline: 2rem;
-  }
-  .mx-\[4rem\] {
-    margin-inline: 4rem;
-  }
-  .mx-\[20rem\] {
-    margin-inline: 20rem;
-  }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .my-6 {
-    margin-block: calc(var(--spacing) * 6);
-  }
-  .my-\[-2rem\] {
-    margin-block: -2rem;
-  }
-  .my-\[2rem\] {
-    margin-block: 2rem;
-  }
-  .my-\[9rem\] {
-    margin-block: 9rem;
-  }
-  .my-\[10rem\] {
-    margin-block: 10rem;
-  }
-  .my-\[20rem\] {
-    margin-block: 20rem;
-  }
-  .my-\[25rem\] {
-    margin-block: 25rem;
+  .mt-\[5rem\] {
+    margin-top: 5rem;
   }
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .table {
     display: table;
-  }
-  .h-\[2rem\] {
-    height: 2rem;
-  }
-  .h-\[5rem\] {
-    height: 5rem;
   }
   .h-\[8rem\] {
     height: 8rem;
   }
-  .w-\[2rem\] {
-    width: 2rem;
-  }
-  .w-\[5rem\] {
-    width: 5rem;
+  .w-\[100\%\] {
+    width: 100%;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -254,23 +188,11 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .animate-ping {
-    animation: var(--animate-ping);
-  }
   .animate-spin {
     animation: var(--animate-spin);
   }
   .resize {
     resize: both;
-  }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .items-center {
     align-items: center;
@@ -278,11 +200,17 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-0 {
-    gap: calc(var(--spacing) * 0);
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .gap-\[4rem\] {
     gap: 4rem;
@@ -300,9 +228,6 @@
   .bg-amber-200 {
     background-color: var(--color-amber-200);
   }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
-  }
   .bg-slate-400 {
     background-color: var(--color-slate-400);
   }
@@ -315,21 +240,14 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
+  .px-\[2\.5rem\] {
+    padding-inline: 2.5rem;
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  .py-\[2rem\] {
+    padding-block: 2rem;
   }
   .text-gray-800 {
     color: var(--color-gray-800);
@@ -341,64 +259,34 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .sm\:mx-\[5rem\] {
+  .sm\:gap-\[1rem\] {
     @media (width >= 40rem) {
-      margin-inline: 5rem;
+      gap: 1rem;
     }
   }
-  .sm\:my-\[-2rem\] {
+  .sm\:gap-\[2rem\] {
     @media (width >= 40rem) {
-      margin-block: -2rem;
+      gap: 2rem;
     }
   }
-  .sm\:my-\[10rem\] {
+  .sm\:bg-amber-300 {
     @media (width >= 40rem) {
-      margin-block: 10rem;
+      background-color: var(--color-amber-300);
     }
   }
-  .sm\:bg-amber-400 {
-    @media (width >= 40rem) {
-      background-color: var(--color-amber-400);
-    }
-  }
-  .md\:mx-10 {
+  .md\:gap-\[1rem\] {
     @media (width >= 48rem) {
-      margin-inline: calc(var(--spacing) * 10);
+      gap: 1rem;
     }
   }
-  .md\:mx-\[5rem\] {
+  .md\:gap-\[2rem\] {
     @media (width >= 48rem) {
-      margin-inline: 5rem;
+      gap: 2rem;
     }
   }
-  .md\:mx-\[10rem\] {
+  .md\:bg-amber-300 {
     @media (width >= 48rem) {
-      margin-inline: 10rem;
-    }
-  }
-  .md\:mx-\[20rem\] {
-    @media (width >= 48rem) {
-      margin-inline: 20rem;
-    }
-  }
-  .md\:my-\[-2\] {
-    @media (width >= 48rem) {
-      margin-block: -2;
-    }
-  }
-  .md\:my-\[-2rem\] {
-    @media (width >= 48rem) {
-      margin-block: -2rem;
-    }
-  }
-  .md\:my-\[-8rem\] {
-    @media (width >= 48rem) {
-      margin-block: -8rem;
-    }
-  }
-  .md\:bg-amber-400 {
-    @media (width >= 48rem) {
-      background-color: var(--color-amber-400);
+      background-color: var(--color-amber-300);
     }
   }
 }
