@@ -634,6 +634,15 @@
       background-color: var(--color-amber-300);
     }
   }
+  .md\:hover\:bg-orange-400 {
+    @media (width >= 48rem) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-orange-400);
+        }
+      }
+    }
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
