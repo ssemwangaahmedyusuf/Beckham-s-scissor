@@ -7,38 +7,50 @@
   <title>Rock Paper</title>
 </head>
 <body>
-  <div class="bg-[#0084D1] h-[8rem] w-[100%] flex justify-evenly items-center gap-[4rem]">
-    <div class="flex justify-center gap-8">
-      <div>
-        <button onclick="
+  <div class="bg-[#489fec8e] h-[18rem] w-[100%]">
+    <div class="flex justify-center items-center gap-5 relative top-[.8rem]">
+      <div  class="bg-transparent w-[10rem] h-[10rem] rounded-full relative">
+        <!-- <button onclick="
       playGame('Rock')
-    " class=" bg-slate-400 text-gray-800 rounded-full animate-spin py-4 px-2.5">Rock</button>
+    " class=" bg-slate-400 text-gray-800 rounded-full animate-spin py-4 px-2.5 transition  shadow delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:bg-orange-400" class="rock">Rock</button> -->
+     <img src="/images2/fist1.png" alt="" onclick="
+    playGame('rock')"
+     class=" w-[12rem] h-[13rem] absolute bottom-[-2rem] transition delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110">
     </div>
-    <div>
-         <button id="btn2" onclick="
+   
+    <div class=" bg-transparent w-[10rem] h-[10rem] rounded-full relative right-3">
+         <!-- <button id="btn2" onclick="
         
          playGame('Paper')
 
   
-  " class=" bg-slate-400  text-gray-800 rounded-full animate-spin py-4 px-2.5">Paper</button>
+  " class=" bg-slate-400  text-gray-800 rounded-full animate-spin py-4 px-2.5 transition  shadow delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:bg-orange-400">Paper</button> -->
+   <img src="/images2/raised1.png" alt="" onclick="
+    playGame('Paper')" 
+    class=" w-[13rem] h-[10rem] absolute transition delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110">
     </div>
-    <div>
- <button onclick="
+    <div class="bg-transparent w-[10rem] h-[10rem] rounded-full relative">
+ <!-- <button onclick="
 
     playGame('Scissor')
-  " class=" bg-slate-400  text-gray-800 rounded-full animate-spin py-4 px-2.7">Scissor</button>
+  " class=" bg-slate-400  text-gray-800 rounded-full animate-spin py-4 px-2.7 transition  shadow delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:bg-orange-400">Scissor</button> -->
+   <img src="/images2/victory1.png" alt="" onclick="
+    playGame('rock')" 
+    class=" w-[5rem] h-[4rem] absolute top-[3rem] transition delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110">
   </div>
-    <div>
- <button onclick="
-          score.Wins = 0,
-          score.Losses = 0,
-          score.Ties = 0;
-
-          localStorage.removeItem('score');
+  
    
-  " class=" bg-slate-400  text-gray-800 rounded-full py-4 px-3  animate-spin ">Reset</button>
-  </div>
     </div>
+     <div class="flex justify-center mt-[.5rem]">
+    <button onclick="
+              score.Wins = 0,
+              score.Losses = 0,
+              score.Ties = 0;
+
+              localStorage.removeItem('score');
+      
+      " class=" bg-slate-400 text-[2rem]  text-gray-800 rounded-full py-[1rem] px-[6rem] animate transition  shadow delay-150 duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:bg-orange-400">Reset</button>
+  </div>
     
     </div>
       
