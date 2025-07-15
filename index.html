@@ -7,9 +7,9 @@
   <title>Rock Paper</title>
 </head>
 <body>
-  <div class="bg-sky-950 h-[18rem] w-[100%]">
+  <div class="bg-sky-950 h-[80vh] w-[100%]">
     <div class="flex justify-center">
-       <h3 class="text-[2rem] md:text-6xl font-bold text-amber-50">Rock Paper Scissor </h3>
+       <h3 class="text-[2rem] md:text-6xl font-bold text-amber-50 mb-5">Rock Paper Scissor </h3>
     </div>
             
     <div class="flex justify-center items-center gap-3 md:gap-7 relative top-[.8rem]">
@@ -49,11 +49,32 @@
   
    
     </div>
+    <div class="mt-[4rem]">
+      <div class="flex justify-center">
+            <p class="result-updated"></p>
+    </div>
+    <div class="flex justify-center">
+         <p class="score-updated"></p>
+    </div>
+    <div class="flex justify-center">
+      <p class = "result-update"></p>
+    </div>
+    </div>
+    
+  
+       
+    
+
+
+
+
+
      <div class="flex justify-center mt-[2rem]">
     <button onclick="
               score.Wins = 0,
               score.Losses = 0,
               score.Ties = 0;
+              updatedScore()
 
               localStorage.removeItem('score');
       
@@ -76,9 +97,7 @@
       Losses:0,
       Ties:0
     };
-          
-          
-    
+       updatedScore();
 
 
     function playGame(playerMove){
@@ -119,9 +138,18 @@
        }
 
        localStorage.setItem('score',JSON.stringify(score))
+               updatedScore();
 
-     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins : ${score.Wins}, Losses : ${score.Losses}, Ties : ${score.Ties}`)
+       document.querySelector('.result-updated').innerHTML = result;
+      
+      
+       document.querySelector('.result-update').innerHTML = `You ${playerMove} - ${computerMove} computer`;
+
+    }
+
+    function updatedScore(){
+          document.querySelector('.score-updated').innerHTML = `
+Wins : ${score.Wins}, Losses : ${score.Losses}, Ties : ${score.Ties}`
     }
 
 
