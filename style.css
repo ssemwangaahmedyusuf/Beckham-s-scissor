@@ -265,6 +265,9 @@
   .h-\[80vh\] {
     height: 80vh;
   }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
   .w-\[5rem\] {
     width: 5rem;
   }
